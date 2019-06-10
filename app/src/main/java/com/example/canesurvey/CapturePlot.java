@@ -64,7 +64,7 @@ public class CapturePlot extends Fragment implements GpsTestListener, View.OnCli
     String mPrefDistanceUnits;
     String mPrefSpeedUnits;
 
-    Adapter plantationadapter,irrigationadapter;
+    ArrayAdapter plantationadapter,irrigationadapter;
     ArrayList<String> plantationlist,irrigationlist;
 
 
@@ -114,10 +114,10 @@ public class CapturePlot extends Fragment implements GpsTestListener, View.OnCli
         mCanetypeCode.setOnFocusChangeListener(this);
         mGVillCode.setOnFocusChangeListener(this);
 
-        plantationadapter=new ArrayAdapter<String>(this.getContext(),android.R.layout.simple_spinner_dropdown_item,plantationlist);
+        plantationadapter=new ArrayAdapter<String>(this.getContext(),android.R.layout.simple_spinner_item,plantationlist);
         mPlantation.setAdapter((SpinnerAdapter) plantationadapter);
 
-        irrigationadapter=new ArrayAdapter<String>(this.getContext(),android.R.layout.simple_spinner_dropdown_item,irrigationlist);
+        irrigationadapter=new ArrayAdapter<String>(this.getContext(),android.R.layout.simple_spinner_item,irrigationlist);
         mIrrigation.setAdapter((SpinnerAdapter) irrigationadapter);
     }
 
