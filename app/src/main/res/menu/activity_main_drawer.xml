@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_newsurvey"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="New Plot Survey" />
+        <item
+            android:id="@+id/nav_pendingshare"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Pending Share Plot Entry" />
+        <item
+            android:id="@+id/nav_nonmemtomem"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="NonMember To Member" />
+        <item
+            android:id="@+id/nav_editplot"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Edit Plot Details" />
+    </group>
+
+    <item android:title="Administrative">
+        <menu>
+            <item
+                android:id="@+id/nav_dataimport"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Data Import / Export" />
+            <item
+                android:id="@+id/nav_datachecking"
+                android:title="Data Checking" />
+        </menu>
+    </item>
+
+    <item android:title="Reporting">
+        <menu>
+            <item
+                android:id="@+id/nav_plotchecking"
+                android:title="Plot Checking" />
+            <item
+                android:id="@+id/nav_daysummary"
+                android:title="Day Summary" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Logout" />
+
+
+</menu>
