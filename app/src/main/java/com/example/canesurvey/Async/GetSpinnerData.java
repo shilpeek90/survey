@@ -3,6 +3,7 @@ package com.example.canesurvey.Async;
 import android.os.AsyncTask;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
+import android.widget.SpinnerAdapter;
 
 import com.example.canesurvey.Comman.CommanData;
 

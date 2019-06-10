@@ -87,11 +87,11 @@ public class CapturePlot extends Fragment implements GpsTestListener, View.OnCli
     }
 
     private void ExecuteTasks() {
-        GetSpinnerData spinnerdatatask=new GetSpinnerData(plantationlist,plantationadapter,CommanData.conn.plantationMethod.getTableName(),false);
+        /*GetSpinnerData spinnerdatatask=new GetSpinnerData(plantationlist,plantationadapter,CommanData.conn.plantationMethod.getTableName(),false);
         spinnerdatatask.execute();
 
-        spinnerdatatask=new GetSpinnerData(irrigationlist,plantationadapter,CommanData.conn.irrigation.getTableName(),false);
-        spinnerdatatask.execute();
+        GetSpinnerData spinnerdata2task=new GetSpinnerData(irrigationlist,plantationadapter,CommanData.conn.irrigation.getTableName(),false);
+        spinnerdata2task.execute();*/
     }
 
     private void AddClickListener() {
@@ -114,11 +114,13 @@ public class CapturePlot extends Fragment implements GpsTestListener, View.OnCli
         mCanetypeCode.setOnFocusChangeListener(this);
         mGVillCode.setOnFocusChangeListener(this);
 
-        plantationadapter=new ArrayAdapter<String>(this.getContext(),android.R.layout.simple_spinner_item,plantationlist);
-        mPlantation.setAdapter((SpinnerAdapter) plantationadapter);
+        plantationlist = CommanData.conn.plantationMethod.getNameList();
+        plantationadapter=new ArrayAdapter(this.getContext(),android.R.layout.simple_spinner_dropdown_item,plantationlist);
+        mPlantation.setAdapter(plantationadapter);
 
-        irrigationadapter=new ArrayAdapter<String>(this.getContext(),android.R.layout.simple_spinner_item,irrigationlist);
-        mIrrigation.setAdapter((SpinnerAdapter) irrigationadapter);
+        irrigationlist= CommanData.conn.irrigation.getNameList();
+        irrigationadapter=new ArrayAdapter(this.getContext(),android.R.layout.simple_spinner_dropdown_item,irrigationlist);
+        mIrrigation.setAdapter(irrigationadapter);
     }
 
     private void LoadControls(View v) {
